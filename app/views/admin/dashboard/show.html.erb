@@ -1,4 +1,6 @@
 <h1>Admin Dashboard</h1>
 
-<h2 class="alert-success">There are <%= @product_count %> <%= link_to 'products', [:admin, :products] %>
-with <%= @category_count %> categories.</h2>
+<div class="alert-success">
+<h3><b>Number of Products:</b> <a href='/admin/products'><%= @product_count %></a></h3>
+<h3><b>Number of Categories:</b> <a href='/admin/products'><%= @category_count %></a></h3>
+</div>
