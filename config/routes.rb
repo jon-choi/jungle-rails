@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
-  namespace :admin do
-    resources :categories
-  end
+
   root to: 'products#index'
 
   get '/about' => 'about#show'
