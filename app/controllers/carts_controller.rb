@@ -1,5 +1,7 @@
 class CartsController < ApplicationController
 
+  before_filer :authorize
+
   def show
   end
 
