@@ -50,4 +50,35 @@ RSpec.describe User, type: :model do
     end
 
   end
+
+  describe ".authenticate_with_credentials" do
+    it "should log a user in with correct email and password" do
+      @user = User.new(first_name: "Dennis", last_name: "Reynolds", email: "den@den.com", password: "123456", password_confirmation: "123456")
+      @user.save
+      expect(User.authenticate_with_credentials("den@den.com", "123456")).to be_truthy
+    end
+
+    it "should not a user if email and password are correct" do
+      @user = User.new(first_name: "Dennis", last_name: "Reynolds", email: "den@den.com", password: "123456", password_confirmation: "123456")
+      @user.save
+      expect(User.authenticate_with_credentials("den@den.com", "qwerty")).to be_falsey
+    end
+
+    it "should trim trailing and leading spaces" do
+      @user = User.new(first_name: "Dennis", last_name: "Reynolds", email: "den@den.com", password: "123456", password_confirmation: "123456")
+      @user.save
+      expect(User.authenticate_with_credentials("    den@den.com", "123456")).to be_truthy
+      expect(User.authenticate_with_credentials("    den@den.com   ", "123456")).to be_truthy
+      expect(User.authenticate_with_credentials("den@den.com   ", "123456")).to be_truthy
+    end
+
+    it "should accept email despite upper/lower case letters" do
+      @user = User.new(first_name: "Dennis", last_name: "Reynolds", email: "den@den.com", password: "123456", password_confirmation: "123456")
+      @user.save
+      expect(User.authenticate_with_credentials("DEN@DEN.com", "123456")).to be_truthy
+      expect(User.authenticate_with_credentials("   den@den.COM   ", "123456")).to be_truthy
+      expect(User.authenticate_with_credentials("dEn@den.com", "123456")).to be_truthy
+    end
+  end
+
 end
