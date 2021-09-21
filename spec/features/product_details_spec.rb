@@ -23,7 +23,7 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
     find('a h4').click
 
     #DEBUG
-    save_screenshot
+    # save_screenshot
 
     #VERIFY = there should only be one article containing product details per product
     expect(page).to have_css 'article.product-detail', count: 1
