@@ -1,16 +1,24 @@
 <section class="orders-show">
 
   <header class="page-header">
-    <h1>Order <%= @order.id %></h1>
+    <h1>Thank you for your order!</h1>
+    <h3>Your payment has been processed</h3>
   </header>
 
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order!</h4>
-  
+    <h4>Order Summary</h4>
+    <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th colspan="2">Products</th>
+        <th>Quantity</th>
+        <th>Total Price</th>
+      </tr>
+    </thead>
 
     <tbody>
     <% @order.line_items.each do |item| %>
-      <%= render 'line_item', product_id: item[:product_id], quantity: item[:quantity], total_line_price: item[:total_price_cents] %> 
+      <%= render 'line_item', product: item.product, quantity: item.quantity, total_line_price: item.total_price_cents %> 
     <% end %>
     </tbody>
 
