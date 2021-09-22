@@ -26,3 +26,25 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Demo
 
+    GIF of user logging in.
+!["User Logging in"](https://github.com/jon-choi/jungle-rails/blob/master/docs/user_login.gif?raw=true)
+
+    GIF of user adding items into their cart
+!["User add to cart"](https://github.com/jon-choi/jungle-rails/blob/master/docs/user-addtocart.gif?raw=true)
+
+    GIF of user paying for items with Khurram's credit card
+!["user paying for items](https://github.com/jon-choi/jungle-rails/blob/master/docs/user-pay.gif?raw=true)
+
+    View of the home page
+!["Home page view"](https://github.com/jon-choi/jungle-rails/blob/master/docs/Home%20Page.png?raw=true)
+
+    View of the sign up page
+!["signup page"](https://github.com/jon-choi/jungle-rails/blob/master/docs/Signup%20page.png?raw=true)
+
+    Product detail page
+!["product detail"](https://github.com/jon-choi/jungle-rails/blob/master/docs/Product%20Details.png?raw=true)
+
+    Admin category dashboard
+!["admin category dashboard](https://github.com/jon-choi/jungle-rails/blob/master/docs/Product%20Details.png?raw=true)
+
+    Enjoy! :)
