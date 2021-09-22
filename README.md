@@ -45,6 +45,6 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 !["product detail"](https://github.com/jon-choi/jungle-rails/blob/master/docs/Product%20Details.png?raw=true)
 
     Admin category dashboard
-!["admin category dashboard](https://github.com/jon-choi/jungle-rails/blob/master/docs/Product%20Details.png?raw=true)
+!["admin category dashboard](https://github.com/jon-choi/jungle-rails/blob/master/docs/Admin%20Category%20Dashboard.png?raw=true)
 
     Enjoy! :)
